@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     // Compile the .cpp file using a shell script
+                    build 'PES1UG21CS230-1'
                     sh 'g++ -o my_program task5.cpp'
                 }
             }
@@ -23,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Add deployment steps here if needed
-                // Example: sh 'kubectl apply -f deployment.yaml'
+                echo 'Deploy'
             }
         }
     }
